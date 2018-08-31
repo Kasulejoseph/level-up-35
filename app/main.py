@@ -7,12 +7,13 @@ def registrationCkecker(fnames):
         fname = name[0]
         lname = name[1]
         if fnames.lower() == fname:
-            print ("Name : " + fname + ' ' + lname +", Category: VIP")
-    print("invalid")
+            return "Name : " + fname + ' ' + lname +", Category: VIP"
+
+
     for name in ordin:
         fname = name[0]
         lname = name[1]
         if fnames.lower() == fname.lower():
-            print ("Name : " + fname + ' ' + lname +", Category: Ordinary")
-
-registrationCkecker(fnames = input("Enter name: "))
+            return "Name : " + fname + ' ' + lname +", Category: Ordinary"
+    return "Not Registered"
+print(registrationCkecker(fnames = input("Enter name: ")))
