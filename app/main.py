@@ -1,17 +1,18 @@
+from reception.reception import vip,ordinary
+
 def registrationCkecker(fnames):
-    f = open("reception/vip.txt")
-    ordinary = open("reception/ordinary_list.txt")
-    for line in f:
-        names = line.split()
-        fname = names[0]
-        lname = names[1]
+    ordin = ordinary()
+    VIP = vip()
+    for name in VIP:
+        fname = name[0]
+        lname = name[1]
+        if fnames.lower() == fname:
+            print ("Name : " + fname + ' ' + lname +", Category: VIP")
+    print("invalid")
+    for name in ordin:
+        fname = name[0]
+        lname = name[1]
         if fnames.lower() == fname.lower():
-            print ("Name : " + fnames + ' ' + lname +", Category: VIP")
-    for name in ordinary:
-        names = name.split()
-        fname = names[0]
-        lname = names[1]
-        if fnames.lower() == fname.lower():
-            print ("Name : " + fnames + ' ' + lname +", Category: Ordinary")
-    print("not found")
+            print ("Name : " + fname + ' ' + lname +", Category: Ordinary")
+
 registrationCkecker(fnames = input("Enter name: "))
