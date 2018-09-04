@@ -1,2 +1,4 @@
-# Andela level-up
-This repo is for andela level up program
+## KiVULU EVENT TICKETS (KETs)
+is an online application for granting digital tickets to people who are
+eligible to attend the scheduled event.
+
