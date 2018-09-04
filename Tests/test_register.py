@@ -8,12 +8,18 @@ class testRegister(unittest.TestCase):
         self.signup = signUp()
         self.signup.firstName("name","dsjh 5fdg")
         self.signup.lastName("name","joseph")
-        self.signup.email("name","kasule@gmail.com")
+        self.signup.email("mail","kasule@gmail.com")
 
     def test_creation(self):
+        '''
+        Test for pressence of signup class
+        '''
         self.assertIsInstance(self.signup,signUp)
     
     def test_firstName_exists(self):
+        '''
+        Test if first name exists
+        '''
         self.signup.firstName("name","kasule")
         self.assertEqual(len(self.signup.fname),1)
 
@@ -22,10 +28,13 @@ class testRegister(unittest.TestCase):
         self.assertEqual(len(self.signup.lname),1)
 
     def test_email_exists(self):
-        self.signup.email("name","kasule@gmail.com")
+        self.signup.email("mail","kasule@gmail.com")
         self.assertEqual(len(self.signup.emails),1)
 
     def test_is_string(self):
+        '''
+        test if input is a string
+        '''
         self.assertRaises(TypeError,self.signup.fname)
         self.assertRaises(TypeError,self.signup.lname)
         self.assertRaises(TypeError,self.signup.emails)
@@ -42,4 +51,8 @@ class testRegister(unittest.TestCase):
         '''
         Test for a valid email address
         '''
-        self.assertIn('@', self.signup.emails["name"])
+        self.assertIn('@', self.signup.emails["mail"])
+
+    def test_email_invalid(self):
+        self.assertNotEqual(self.signup.emails["mail"],"kasule@gmail")
+    
