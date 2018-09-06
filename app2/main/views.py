@@ -3,14 +3,14 @@ main = Blueprint('main', __name__)
 def all_users():
     user_list = [
     {'musoke':
-            [{"user_id":1, 'password':'male'}]},
+            [{"user_id":1,"Fullnames":"musoke innocent", 'password':'male'}]},
 
     {'ivan':
-            [{"user_id":2, 'password':'password'}]},
+            [{"user_id":2,"Fullnames":"ivan kivumbi", 'password':'password'}]},
     {'hassan':
-            [{"user_id":3, 'password':'computer'}]},
+            [{"user_id":3,"Fullnames":"hassan innocent", 'password':'computer'}]},
     {'mary':
-            [{"user_id":4, 'password':'mary'}]}
+            [{"user_id":4,"Fullnames":"mary Gorret", 'password':'mary'}]}
     ]
     return user_list
 
