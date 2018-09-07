@@ -4,8 +4,13 @@ class Person:
         self.lastname = lastname
         self.age = age
 
-    def full_name(self):
-        return self.firstname + " "+ self.lastname
+    def full_details(self):
+        fullname = {
+            "firstname": self.firstname ,
+            "lastname": self.lastname ,
+            "age": self.age
+        }
+        return fullname
 
     def description(self):
         return "{} is aged {} years".format(self.firstname,self.age)
@@ -16,35 +21,38 @@ class User(Person):
         self.id = id
         self.password = password
     
-    def ids(self):
-        return self.id
+    def full_name(self):
+        user_details = super().full_details()
+        us
+
 
     def setup(self):
         return "{}  password is {}".format(self.firstname,self.password)
 
 class GuestList():
-    def __init__(self):
+    def __init__(self,firstname,lastname,age,id,password):
+        super.__init__(id, password)
         self.users = {}
 
     def is_user_exists(self, id):
         return self.users.__contains__(id)
 
     def add_a_user(self,username,id):
-       if self.is_user_exists(username):
-           return "not exists"
-       self.users['name'] = username
-       self.users['id'] = id
+       if self.is_user_exists(id):
+           return "user already exists"
+       user = User(username, "joseph", 12, id,"password123")
+       self.users[id] = user
 
     def get_all_users(self):
         if len(self.users) ==0:
             return "no user found"
         return self.users
-
-    def get_a_user_by_id(self, id):
-        return self.users
         
     def delete_user(self, id):
-        pass
-
+        if self.is_user_exists(id):
+            return self.users
+        del self.users[id]
+        return self.users
+    print(add_a_user("kivumbi",2,6))
         
 
