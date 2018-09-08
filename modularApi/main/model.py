@@ -31,17 +31,23 @@ class User(Person):
 
 class GuestList():
     def __init__(self,firstname,lastname,age,id,password):
-        super.__init__(id, password)
-        self.users = {}
+        super().__init__()
+        self.users = {
+            "name": "kasule",
+            "id": 1,
+            "age": 23
+        }
 
     def is_user_exists(self, id):
         return self.users.__contains__(id)
 
     def add_a_user(self,username,id):
-       if self.is_user_exists(id):
-           return "user already exists"
-       user = User(username, "joseph", 12, id,"password123")
-       self.users[id] = user
+    #    if is_user_exists(id):
+    #        return "user already exists"
+        if self.users["id"] == id:
+            return "user already exists"
+        user = User(username, "joseph", 12, id,"password123")
+        self.users[id] = user
 
     def get_all_users(self):
         if len(self.users) ==0:
@@ -53,6 +59,5 @@ class GuestList():
             return self.users
         del self.users[id]
         return self.users
-    print(add_a_user("kivumbi",2,6))
         
 

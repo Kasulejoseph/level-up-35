@@ -9,7 +9,8 @@ class signUp():
         if not isinstance(self.fname[name], str):
             raise TypeError("Value should be a string")
         if len(self.fname[name]) < 4:
-            raise ValueError("name should have more than 4 characters" )  
+            raise ValueError("name should have more than 4 characters" )
+        return self.fname
 
     def lastName(self,name,lastname):
         self.lname[name] = lastname
@@ -17,11 +18,13 @@ class signUp():
             raise TypeError("value should be a string") 
         if len(self.lname[name]) < 4:
             raise ValueError("few character inputs" ) 
+        return self.lname
 
     def email(self,mail,address):
         self.emails[mail] = address
         if not isinstance(self.emails[mail], str):
             raise TypeError("email should be in string format")
         if len(self.emails[mail]) < 11:
-            raise ValueError("Email must have more than 10 characters " )  
+            raise ValueError("Email must have more than 10 characters " )
+        return self.emails  
     
