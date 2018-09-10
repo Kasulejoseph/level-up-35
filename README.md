@@ -1,29 +1,11 @@
-<<<<<<< HEAD
-## KiVULU EVENT TICKETS (KETs)
+# KiVULU EVENT TICKETS (KETs)
 is an online application for granting digital tickets to people who are
 eligible to attend the scheduled event.
 
-=======
-Challenge:
-------------
-Imagine you are at an event reception desk; when someone arrives to attend,
- you are charged with checking if a user registered for the event and in 
- which category.Given two text files, one containing names of people 
- who registered for the event in the VIP category and the second contains 
- those that signed up for ORDINARY tickets.Your program should:
-- Read the files, and store the contents in lists.
-- Ask a user to enter one of their names and check through the lists to see
-    > if a user paid for a ticket
-    > if the ticket paid for, is an Ordinary or Vip ticketSpecs:
+## Build Status
 
-  Name your main function registration_checker, its argument/input should 
-  be a single name
-  For example; For the name Maria, it should return a Full name, Category 
-  i.e Maria Nanfuka, VIP
-  For the name Edison, it should return Not Registered
-  Put your file (reception.py) in an importable folder named reception
-   within the project directory.
+[![Build Status](https://travis-ci.com/Kasulejoseph/Ticket-App.svg?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/Kasulejoseph/Ticket-App/badge.svg?branch=develop)](https://coveralls.io/github/Kasulejoseph/Ticket-App?branch=develop)
 
-** Your Git and Pivotal Tracker usage is of a high priority (edited)
-vip_list.txt 
->>>>>>> reception
+view the home page UI on the [gh-pages](https://kasulejoseph.github.io/Ticket-App/)
+
