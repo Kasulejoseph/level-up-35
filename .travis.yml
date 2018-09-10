@@ -9,6 +9,6 @@ install:
   - pip install coveralls
 
 script:
-  - nosetests -v --with-coverage --cover-package="Tests/test_register.py"
+  - nosetests -v --with-coverage --cover-package="Tests"
 after_success: 
 - coveralls
