@@ -25,6 +25,5 @@ class signUp():
         if not isinstance(self.emails[mail], str):
             raise TypeError("email should be in string format")
         if len(self.emails[mail]) < 11:
-            raise ValueError("Email must have more than 10 characters " )
-        return self.emails  
+            raise ValueError("Email must have more than 10 characters " )  
     

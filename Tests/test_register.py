@@ -56,3 +56,11 @@ class testRegister(unittest.TestCase):
     def test_email_invalid(self):
         self.assertNotEqual(self.signup.emails["mail"],"kasule@gmail")
     
+    def test_isinstance(self):
+        self.signup.fname["name"]= 343 
+        self.assertRaises(TypeError, "Value should be a string")
+
+    def test_islength_less_than_four(self):
+        cal_len = self.signup.fname["name"]
+        self.assertTrue(len(cal_len)>4)
+        
