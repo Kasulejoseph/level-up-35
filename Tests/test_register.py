@@ -1,5 +1,5 @@
 import unittest
-from register import signUp
+from .register import signUp
 
 class testRegister(unittest.TestCase):
 

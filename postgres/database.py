@@ -15,3 +15,7 @@ class DatabaseConnection:
     except Exception as e:
         print(e.message)
         print('Failed to connect to db')
+
+    def create_user(self, first_name, last_name, age, create_at):
+        insert_user_command = """
+        
